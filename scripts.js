@@ -19,10 +19,7 @@ function createStars() {
     // Print stars for each digit (excluding '.')
     let digitCount = 0;
     for (let i = 0; i < piValue.length && digitCount < numDigits; i++) {
-        if (piValue[i] === '.') {
-            // Skip '.' characters
-            continue;
-        } else {
+        if (piValue[i] !== '.') {
             // Convert the digit to a number and print stars
             document.getElementById("outputArea").innerHTML += "*".repeat(parseInt(piValue[i])) + '\n';
             digitCount++;
@@ -56,10 +53,7 @@ function createStarsReversed() {
     let digitCount = 0;
 
     for (let i = 0; i < piValue.length && digitCount < numDigits; i++) {
-        if (piValue[i] === '.') {
-            // Skip '.' characters
-            continue;
-        } else {
+        if (piValue[i] !== '.') {
             // Convert the digit to a number and add stars to the array
             starsArray.push("*".repeat(parseInt(piValue[i])));
             digitCount++;
